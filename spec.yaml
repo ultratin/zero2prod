@@ -2,7 +2,7 @@ name: zero2prod
 region: sfo
 services:
   - name: zero2prod
-    dockerfile_path: Dockerfile
+    dockerfile_path: dockerfile
     source_dir: .
     github:
       branch: main
