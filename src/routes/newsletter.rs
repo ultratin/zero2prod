@@ -22,7 +22,7 @@ pub async fn publish_newsletter(
     request: HttpRequest,
 ) -> Result<HttpResponse, PublishError> {
     let credentials = basic_authentication(request.headers()).map_err(PublishError::AuthError)?;
-    let user_id = validate_credentials(credentials, &pool).await?;
+    let _user_id = validate_credentials(credentials, &pool).await?;
 
     let subscribers = get_confirmed_subscribers(&pool).await?;
     for subscriber in subscribers {
